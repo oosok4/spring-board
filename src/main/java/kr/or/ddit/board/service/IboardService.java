@@ -32,6 +32,16 @@ public interface IboardService {
 	* Method 설명 : 게시판 등록
 	*/
 	int insertBoard(BoardVo boardVo);
+	
+	/**
+	* Method : getBoard
+	* 작성자 : PC17
+	* 변경이력 :
+	* @param boardId
+	* @return
+	* Method 설명 : 게시판 한개 가져오기
+	*/
+	BoardVo getBoard (int board_id);
 }
 
 

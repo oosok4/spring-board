@@ -2,7 +2,9 @@ package kr.or.ddit.board.dao;
 
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -13,6 +15,8 @@ import org.slf4j.LoggerFactory;
 
 import kr.or.ddit.board.model.BoardVo;
 import kr.or.ddit.testenv.LogicTestEnv;
+import kr.or.ddit.text.model.TextVo;
+import kr.or.ddit.user.dao.IuserDao;
 
 public class BoardDaoTest extends LogicTestEnv{
 
@@ -20,6 +24,9 @@ public class BoardDaoTest extends LogicTestEnv{
 	
 	@Resource(name="boardDao")
 	private IboardDao boardDao;
+	
+	@Resource(name="userDao")
+	private IuserDao userDao;
 	
 	@Test
 	public void boardListTest() {
@@ -54,5 +61,7 @@ public class BoardDaoTest extends LogicTestEnv{
 		/***Then***/
 		assertEquals(result, 1);
 	}
+	
+	
 
 }

@@ -45,8 +45,20 @@ public class UserService implements IuserService {
 	public UserVo getUser(String userId) {
 		return userDao.getUser(userId);
 	}
-	
-	
-	
+
+
+
+	@Override
+	public Map<String, Object> textPagingList(Map<String, Object> map) {
+		Map<String, Object> resultMap = new HashMap<String, Object>();
+		resultMap.put("textList", userDao.textPagingList(map));
+		String board_id2 = String.valueOf(map.get("board_id"));
+		int board_id = Integer.parseInt(board_id2);
+		int textCnt = userDao.textCnt(board_id);
+		int paginationSize = (int) Math.ceil((double) textCnt
+				/ (int) map.get("pageSize"));
+		resultMap.put("paginationSize", paginationSize);
+		return resultMap;
+	}
 
 }

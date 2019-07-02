@@ -41,6 +41,11 @@ public class BoardDao implements IboardDao {
 	public int insertBoard(BoardVo boardVo) {
 		return sqlSession.insert("board.insertBoard",boardVo);
 	}
+
+	@Override
+	public BoardVo getBoard(int board_id) {
+		return sqlSession.selectOne("board.getBoard",board_id);
+	}
 	
 	
 	

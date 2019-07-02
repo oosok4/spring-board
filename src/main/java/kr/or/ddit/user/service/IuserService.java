@@ -27,6 +27,9 @@ public interface IuserService {
 	 */
 	UserVo getUser(String userId);
 	
+	Map<String, Object> textPagingList(Map<String, Object> map);
+	
+	
 	
 	
 	
