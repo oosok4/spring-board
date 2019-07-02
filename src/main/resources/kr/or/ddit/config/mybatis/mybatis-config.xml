@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="UserVo" type="kr.or.ddit.user.model.UserVo" />
+		<typeAlias alias="BoardVo" type="kr.or.ddit.board.model.BoardVo" />
+		<typeAlias alias="TextVo" type="kr.or.ddit.text.model.TextVo" />
+<!-- 		<typeAlias alias="pageVo" type="kr.or.ddit.user.model.PageVo"/> -->
+<!-- 		<typeAlias alias="lprodVo" type="kr.or.ddit.lprod.model.LprodVo"/> -->
+<!-- 		<typeAlias alias="prodVo" type="kr.or.ddit.prod.model.ProdVo"/> -->
+	</typeAliases>
+
+	
+	<mappers>
+		<mapper resource="kr/or/ddit/config/mybatis/mapper/user.xml" />
+		<mapper resource="kr/or/ddit/config/mybatis/mapper/board.xml" />
+		<mapper resource="kr/or/ddit/config/mybatis/mapper/text.xml" />
+<!-- 		<mapper resource="kr/or/ddit/config/mybatis/mapper/lprod.xml" /> -->
+<!-- 		<mapper resource="kr/or/ddit/config/mybatis/mapper/prod.xml" /> -->
+	</mappers>
+</configuration>
