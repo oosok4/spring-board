@@ -97,8 +97,7 @@
 				</table>
 			</div>
 
-			<a
-				href="${pageContext.request.contextPath}/createText?board_id=${board_id}&&userid=${userid}"
+			<a href="${pageContext.request.contextPath}/createText?board_id=${board_id}&&userid=${userid}"
 				class="btn btn-default pull-right">게시물 등록</a>
 
 			<div class="text-center">

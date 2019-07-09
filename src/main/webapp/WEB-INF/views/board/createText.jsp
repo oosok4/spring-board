@@ -1,7 +1,5 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
-<%@page import="kr.or.ddit.db.user.model.PageVo"%>
-<%@page import="kr.or.ddit.db.user.model.UsersVo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -22,7 +20,7 @@
 <title>사용자 등록</title>
 
 <!-- LibLib(Css,js) -->
-<%@include file="/common/basicLib.jsp"%>
+<%@include file="/WEB-INF/views/common/basicLib.jsp"%>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="${pageContext.request.contextPath }/SE2/js/HuskyEZCreator.js"></script>
 
@@ -90,20 +88,20 @@ var oEditors = []; // 개발되어 있는 소스에 맞추느라, 전역변수�
 
 <body>
 	<!--  header영역 -->
-	<%@include file="/common/header.jsp"%>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
 	<div class="container-fluid">
 		<div class="row">
 
 			<!--  left영역 -->
-			<%@include file="/common/left.jsp"%>
+			<%@include file="/WEB-INF/views/common/left.jsp"%>
 
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<div class="row">
 					<div class="col-sm-8 blog-main">
 						<h2 class="sub-header">게시글 작성</h2>
 						
-						<form id="frm" class="form-horizontal" role="form" action="${pageContext.request.contextPath }/createText" method="post" 
+						<form id="frm" class="form-horizontal" role="form" action="${cp }/createText" method="post" 
 							enctype="multipart/form-data">
 							<input type="hidden" id="userid" name="userid" value="${userid}">
 							<input type="hidden" id="board_id" name="board_id" value="${board_id}">
@@ -117,11 +115,7 @@ var oEditors = []; // 개발되어 있는 소스에 맞추느라, 전역변수�
 							
 							<textarea name="smarteditor" id="smarteditor" rows="10" cols="100" style="width:766px; height:412px;"></textarea> 
 							
-							<div class="form-group">
-								<div class="col-sm-10">
-									<input type="button" id="savebutton" value="게시글 등록" />
-								</div>
-							</div>
+							<br><br>
 							
 							<div class="form-group">
 								<label for="userNm" class="col-sm-2 control-label">첨부파일&nbsp;&nbsp; :  </label>
@@ -131,7 +125,13 @@ var oEditors = []; // 개발되어 있는 소스에 맞추느라, 전역변수�
 								</div>
 							
 								<div class="col-sm-2">
-									<button id="click" type="button" class="btn btn-danger">추 가</button><br>
+									<button id="click" type="button">추 가</button><br>
+								</div>
+							</div>
+							<br>
+							<div class="form-group">
+								<div class="col-sm-10">
+									<input type="button" class="btn btn-danger" id="savebutton" value="게시글 등록" />
 								</div>
 							</div>
 							

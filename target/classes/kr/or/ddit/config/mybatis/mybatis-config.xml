@@ -8,6 +8,8 @@
 		<typeAlias alias="UserVo" type="kr.or.ddit.user.model.UserVo" />
 		<typeAlias alias="BoardVo" type="kr.or.ddit.board.model.BoardVo" />
 		<typeAlias alias="TextVo" type="kr.or.ddit.text.model.TextVo" />
+		<typeAlias alias="FileVo" type="kr.or.ddit.file.model.FileVo" />
+		<typeAlias alias="CommentVo" type="kr.or.ddit.comment.model.CommentVo" />
 <!-- 		<typeAlias alias="pageVo" type="kr.or.ddit.user.model.PageVo"/> -->
 <!-- 		<typeAlias alias="lprodVo" type="kr.or.ddit.lprod.model.LprodVo"/> -->
 <!-- 		<typeAlias alias="prodVo" type="kr.or.ddit.prod.model.ProdVo"/> -->
@@ -18,6 +20,8 @@
 		<mapper resource="kr/or/ddit/config/mybatis/mapper/user.xml" />
 		<mapper resource="kr/or/ddit/config/mybatis/mapper/board.xml" />
 		<mapper resource="kr/or/ddit/config/mybatis/mapper/text.xml" />
+		<mapper resource="kr/or/ddit/config/mybatis/mapper/file.xml" />
+		<mapper resource="kr/or/ddit/config/mybatis/mapper/comment.xml" />
 <!-- 		<mapper resource="kr/or/ddit/config/mybatis/mapper/lprod.xml" /> -->
 <!-- 		<mapper resource="kr/or/ddit/config/mybatis/mapper/prod.xml" /> -->
 	</mappers>

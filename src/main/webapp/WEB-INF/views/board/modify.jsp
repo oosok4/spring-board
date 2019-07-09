@@ -1,7 +1,5 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
-<%@page import="kr.or.ddit.db.user.model.PageVo"%>
-<%@page import="kr.or.ddit.db.user.model.UsersVo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -22,7 +20,7 @@
 <title>게시물 수정</title>
 
 <!-- LibLib(Css,js) -->
-<%@include file="/common/basicLib.jsp"%>
+<%@include file="/WEB-INF/views/common/basicLib.jsp"%>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="${pageContext.request.contextPath }/SE2/js/HuskyEZCreator.js"></script>
 
@@ -85,13 +83,13 @@ var oEditors = []; // 개발되어 있는 소스에 맞추느라, 전역변수�
 
 <body>
 	<!--  header영역 -->
-	<%@include file="/common/header.jsp"%>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
 	<div class="container-fluid">
 		<div class="row">
 
 			<!--  left영역 -->
-			<%@include file="/common/left.jsp"%>
+			<%@include file="/WEB-INF/views/common/left.jsp"%>
 
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<div class="row">

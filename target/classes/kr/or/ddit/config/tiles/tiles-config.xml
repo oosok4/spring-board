@@ -26,4 +26,20 @@
 	</definition>
 	
 	
+
+	
+	<!-- selectText View -->
+	<definition name="tiles.textView" extends="layout">
+		<put-attribute name="body" value="/WEB-INF/views/board/text.jsp"/>
+	</definition>
+	
+	<!-- deleteText View -->
+	<definition name="tiles.delete" extends="layout">
+		<put-attribute name="body" value="/WEB-INF/views/board/delete.jsp"/>
+	</definition>
+	
+	
+	
+	
+	
 </tiles-definitions>

@@ -74,9 +74,10 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/primaryBoard")
-	public String selectBoard(Model model, HttpSession session, String board_id,String page,String pageSize) {
+	public String selectBoard(Model model, HttpSession session,String userid, String board_id,String page,String pageSize) {
 		int boardId = Integer.parseInt(board_id);
 		session.setAttribute("board_id",boardId);
+		session.setAttribute("userid", userid);
 		model.addAttribute("textList",txtService.allText(boardId));
 		
 		BoardVo boardVo = boardService.getBoard(boardId);
@@ -95,7 +96,6 @@ public class BoardController {
 		Map<String, Object> resultMap = userService.textPagingList(map);
 		int paginationSize = (Integer)resultMap.get("paginationSize");
 		List<TextVo> textList = (List<TextVo>) resultMap.get("textList");
-		
 		
 		session.setAttribute("boardList", boardService.boardList());
 		

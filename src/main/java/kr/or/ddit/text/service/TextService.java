@@ -17,8 +17,7 @@ public class TextService implements ItextService {
 
 	@Override
 	public int insertText(TextVo textVo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return txtDao.insertText(textVo);
 	}
 
 	@Override
@@ -29,32 +28,27 @@ public class TextService implements ItextService {
 
 	@Override
 	public TextVo getText(int text_id) {
-		// TODO Auto-generated method stub
-		return null;
+		return txtDao.getText(text_id);
 	}
 
 	@Override
 	public int updateText(TextVo textVo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return txtDao.updateText(textVo);
 	}
 
 	@Override
 	public int changeCol(String text_id) {
-		// TODO Auto-generated method stub
-		return 0;
+		return txtDao.changeCol(text_id);
 	}
 
 	@Override
 	public int insertReply(TextVo textVo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return txtDao.insertReply(textVo);
 	}
 
 	@Override
 	public TextVo recentReply() {
-		// TODO Auto-generated method stub
-		return null;
+		return txtDao.recentReply();
 	}
 
 }

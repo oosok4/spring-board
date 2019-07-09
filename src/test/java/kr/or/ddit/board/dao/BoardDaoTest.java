@@ -62,6 +62,19 @@ public class BoardDaoTest extends LogicTestEnv{
 		assertEquals(result, 1);
 	}
 	
+	@Test
+	public void boardModifyTest() {
+		/***Given***/
+
+		BoardVo boardVo = new BoardVo(7, "어쩌라고", "N");
+		/***When***/
+		int result = boardDao.updateBoardYN(boardVo);
+				
+		/***Then***/
+		assertEquals(result, 1);
+	}
+	
+	
 	
 
 }

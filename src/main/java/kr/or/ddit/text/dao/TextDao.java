@@ -21,7 +21,7 @@ public class TextDao implements ItextDao {
 	@Override
 	public int insertText(TextVo textVo) {
 		
-		return 5;
+		return sqlSession.insert("text.insertText",textVo);
 	}
 
 	//게시판안에 모든 게시글 가져오기
@@ -35,30 +35,30 @@ public class TextDao implements ItextDao {
 	@Override
 	public TextVo getText(int text_id) {
 		
-		return null;
+		return sqlSession.selectOne("text.getText",text_id);
 	}
 
 	@Override
 	public int updateText(TextVo textVo) {
 		
-		return 0;
+		return sqlSession.update("text.updateText",textVo);
 	}
 
 	@Override
 	public int changeCol(String text_id) {
 		
-		return 0;
+		return sqlSession.update("text.changeCol",text_id);
 	}
 
 	@Override
 	public int insertReply(TextVo textVo) {
 		
-		return 0;
+		return sqlSession.insert("text.insertReply",textVo);
 	}
 
 	@Override
 	public TextVo recentReply() {
 		
-		return null;
+		return sqlSession.selectOne("text.recentReply");
 	}
 }
